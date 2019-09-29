@@ -6,8 +6,8 @@ const updateOperation = require('../controllers/update.controller');
 const deleteOperation = require('../controllers/delete.controller');
 
 router.post('/create',createOperation.main);
-router.post('/read',readOperation.main);
+router.get('/read',readOperation.main);
 router.post('/update',updateOperation.main);
-router.post('/delete',deleteOperation.main);
+router.delete('/delete',deleteOperation.main);
 
 module.exports = router;

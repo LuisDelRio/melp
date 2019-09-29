@@ -4,18 +4,17 @@ const deleteOperation = {};
 
 deleteOperation.main = async (req, res) => {
     try {
-        let dent = req.body.dato[0];
         let rest = await new FileSync('./db/restaurantes.json');
         let dbRest = low(rest);
 
-        if(dent.rating != null){
-            await dbRest.get('restaurantes').remove({'rating': dent.rating}).write();
-        }else if(dent.name != null){
-            await dbRest.get('restaurantes').remove({'name': dent.name}).write();
-        }else if(dent.state != null){
-            await dbRest.get('restaurantes').remove({'state': dent.state}).write();
-        }else if(dent.city != null){
-            await dbRest.get('restaurantes').remove({'city': dent.city}).write();
+        if(req.query.rating != null){
+            await dbRest.get('restaurantes').remove({'rating': parseInt(req.query.rating)}).write();
+        }else if(req.query.name != null){
+            await dbRest.get('restaurantes').remove({'name': req.query.name}).write();
+        }else if(req.query.state != null){
+            await dbRest.get('restaurantes').remove({'state': req.query.state}).write();
+        }else if(req.query.city != null){
+            await dbRest.get('restaurantes').remove({'city': req.query.city}).write();
         }else{
             await dbRest.get('restaurantes').remove().write();
         }
