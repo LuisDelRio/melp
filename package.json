@@ -1,0 +1,18 @@
+{
+  "name": "melp",
+  "version": "1.0.0",
+  "description": "Test BackEnd Job",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "Luis Antonio del Río Orozco",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "git": "^0.1.5",
+    "lowdb": "^1.0.0",
+    "uuid": "^3.3.3"
+  }
+}
