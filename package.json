@@ -10,7 +10,7 @@
   "author": "Luis Antonio del Río Orozco",
   "dependencies": {
     "csvtojson": "^2.0.10",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "git": "^0.1.5",
     "lowdb": "^1.0.0",
     "uuid": "^3.3.3"
